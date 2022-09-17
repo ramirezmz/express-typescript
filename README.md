@@ -56,7 +56,8 @@ type Weather = 'sunny' | 'rainy' | 'cloudy' | 'windy' | 'stormy'
 type Visibility = 'great' | 'good' | 'ok' | 'poor'
 ```
 
-- Porque não usar type ao inves de interface?
+- **Porque não usar type ao inves de interface?**
+  
   A Diferença entre os dois é que... quando desejamos extender umas propriedades para outro objeto, a interface faz isso de uma forma simples, enquanto o type nos faz criar um novo objeto com as propriedades.
   
   **Extendendo com `interface`**
