@@ -91,6 +91,23 @@ type Visibility = 'great' | 'good' | 'ok' | 'poor'
   ```
   Particularmente, prefiro usar interface para coisas dinamicas e type para coisas estáticas.
 
+### Criar uma interface a partir de outra
+
+Temos duas formas de poder obter os valores criados a partir de uma interface, o `Pick<NomeDaInterface, 'valores'>` e o `Omit<NomeDaInterface, 'valores'>`.
+
+```ts
+interface DiaryEntry {
+  id: number
+  date: string
+  weather: Weather
+  visibility: Visibility
+  comment: string
+}
+
+type NonSensitiveInfoDiaryEntry = Pick<DiaryEntry, 'id' | 'date' | 'weather' | 'visibility'>
+```
+
+
   ### Links
 
   https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
