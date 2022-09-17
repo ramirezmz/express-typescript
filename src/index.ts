@@ -7,7 +7,7 @@ app.use(express.json()) // middleware que transforma la req.body a un JSON
 const PORT = 3000
 
 app.get('/ping', (_req, res) => {
-  console.log('Someone pinged here!!')
+  console.log('Someone pinged here!!' + new Date().toLocaleDateString())
   res.send('pong')
 })
 
